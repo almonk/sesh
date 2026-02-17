@@ -89,6 +89,17 @@ Kill a session:
 zellij kill-session calm-river
 ```
 
+## Keybindings
+
+sesh includes built-in keybindings for switching between panes:
+
+| Key | Action |
+|-----|--------|
+| `Alt+1` | Focus the AI pane (left) |
+| `Alt+2` | Focus lazygit (right) |
+
+These are embedded in the session layout and won't interfere with your global Zellij config.
+
 ## How it works
 
 sesh generates a temporary Zellij layout file and launches a session with two vertical panes:

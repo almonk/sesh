@@ -67,6 +67,12 @@ function sesh
 
     set -l layout_file (mktemp /tmp/sesh-layout.XXXXXX.kdl)
     echo "
+keybinds {
+    shared {
+        bind \"Alt 1\" { MoveFocus \"left\"; }
+        bind \"Alt 2\" { MoveFocus \"right\"; }
+    }
+}
 layout {
     pane split_direction=\"vertical\" {
         $cmd_block
