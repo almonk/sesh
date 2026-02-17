@@ -64,6 +64,7 @@ sesh                      # Claude + lazygit in current directory
 sesh codex                # Codex + lazygit in current directory
 sesh pi                   # Pi + lazygit in current directory
 sesh claude ~/my-project  # Claude + lazygit in a specific directory
+sesh last                 # Reattach to the most recent session
 ```
 
 ## Attaching to sessions

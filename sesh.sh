@@ -11,6 +11,19 @@ sesh() {
 
     local tool="${1:-claude}"
     tool="$(echo "$tool" | tr '[:upper:]' '[:lower:]')"
+
+    if [[ "$tool" == "last" ]]; then
+        local session
+        session="$(zellij list-sessions 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | head -1 | awk '{print $1}')"
+        if [[ -z "$session" ]]; then
+            echo "sesh: no sessions found"
+            return 1
+        fi
+        echo "sesh: attaching to $session"
+        zellij attach "$session"
+        return
+    fi
+
     local dir="${2:-$(pwd)}"
 
     dir="$(realpath "$dir" 2>/dev/null)" || {

@@ -8,6 +8,18 @@ function sesh
     end
 
     set -l tool (string lower -- $argv[1])
+
+    if test "$tool" = last
+        set -l session (zellij list-sessions 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | head -1 | awk '{print $1}')
+        if test -z "$session"
+            echo "sesh: no sessions found"
+            return 1
+        end
+        echo "sesh: attaching to $session"
+        zellij attach "$session"
+        return
+    end
+
     set -l dir $argv[2]
 
     if test -z "$tool"
