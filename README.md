@@ -13,33 +13,29 @@ A split terminal session for AI-assisted coding. Runs an AI tool alongside lazyg
 
 ## Install
 
-### Fish (with Fisher)
+### Fish
 
 ```fish
+# With Fisher (recommended)
 fisher install almonk/sesh
-```
 
-### Fish (manual)
-
-```fish
-cp functions/sesh.fish ~/.config/fish/functions/
-cp completions/sesh.fish ~/.config/fish/completions/
+# Or manually
+curl -sL https://raw.githubusercontent.com/almonk/sesh/main/functions/sesh.fish -o ~/.config/fish/functions/sesh.fish
+curl -sL https://raw.githubusercontent.com/almonk/sesh/main/completions/sesh.fish -o ~/.config/fish/completions/sesh.fish
 ```
 
 ### Zsh
 
-Add this to your `~/.zshrc`:
-
 ```zsh
-source /path/to/sesh/sesh.sh
+curl -sL https://raw.githubusercontent.com/almonk/sesh/main/sesh.sh -o ~/.config/sesh.sh
+echo 'source ~/.config/sesh.sh' >> ~/.zshrc
 ```
 
 ### Bash
 
-Add this to your `~/.bashrc`:
-
 ```bash
-source /path/to/sesh/sesh.sh
+curl -sL https://raw.githubusercontent.com/almonk/sesh/main/sesh.sh -o ~/.config/sesh.sh
+echo 'source ~/.config/sesh.sh' >> ~/.bashrc
 ```
 
 ## Dependencies
