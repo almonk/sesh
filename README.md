@@ -69,7 +69,7 @@ sesh claude ~/my-project  # Claude + lazygit in a specific directory
 
 ## Attaching to sessions
 
-Each sesh session runs inside Zellij, which assigns it a random haiku-style name like `stiff-fireworks` or `quiet-morning`. If you close your terminal or detach, your session keeps running in the background.
+Each sesh session runs inside Zellij, which assigns it a random haiku-style name like `calm-river` or `silver-leaf`. If you close your terminal or detach, your session keeps running in the background.
 
 List active sessions:
 
@@ -80,13 +80,13 @@ zellij list-sessions
 Reattach to a session:
 
 ```
-zellij attach stiff-fireworks
+zellij attach calm-river
 ```
 
 Kill a session:
 
 ```
-zellij kill-session stiff-fireworks
+zellij kill-session calm-river
 ```
 
 ## How it works
