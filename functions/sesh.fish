@@ -71,6 +71,7 @@ keybinds {
     shared {
         bind \"Alt 1\" { MoveFocus \"left\"; }
         bind \"Alt 2\" { MoveFocus \"right\"; }
+        bind \"Ctrl q\" { Detach; }
     }
 }
 layout {
