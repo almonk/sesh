@@ -100,6 +100,16 @@ sesh includes built-in keybindings for switching between panes:
 
 These are embedded in the session layout and won't interfere with your global Zellij config. Use `Ctrl+q` to close the window — your session stays alive in the background and you can reattach later.
 
+## Recommended lazygit config
+
+Since lazygit runs in a narrow 35% pane, it looks best in single-column mode. Add this to your lazygit config (`~/Library/Application Support/lazygit/config.yml` on macOS, `~/.config/lazygit/config.yml` on Linux):
+
+```yaml
+gui:
+  screenMode: full
+  sidePanelWidth: 0.2
+```
+
 ## How it works
 
 sesh generates a temporary Zellij layout file and launches a session with two vertical panes:
