@@ -40,6 +40,12 @@ curl -sL https://raw.githubusercontent.com/almonk/sesh/main/sesh.sh -o ~/.config
 echo 'source ~/.config/sesh.sh' >> ~/.bashrc
 ```
 
+### Prompt
+
+Paste this into your AI coding agent and it will handle the rest:
+
+> Install sesh from https://github.com/almonk/sesh — it's a shell function that launches a Zellij split with an AI coding tool and lazygit side by side. Detect my shell (fish, zsh, or bash) and install accordingly. Also install zellij and lazygit with brew if they're not already installed.
+
 ## Dependencies
 
 Install with Homebrew:
