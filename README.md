@@ -13,26 +13,40 @@ A split terminal session for AI-assisted coding. Runs an AI tool alongside lazyg
 
 ## Install
 
-### With Fisher (recommended)
+### Fish (with Fisher)
 
 ```fish
 fisher install almonk/sesh
 ```
 
-### Manual
-
-Copy the function and completions into your fish config:
+### Fish (manual)
 
 ```fish
 cp functions/sesh.fish ~/.config/fish/functions/
 cp completions/sesh.fish ~/.config/fish/completions/
 ```
 
+### Zsh
+
+Add this to your `~/.zshrc`:
+
+```zsh
+source /path/to/sesh/sesh.sh
+```
+
+### Bash
+
+Add this to your `~/.bashrc`:
+
+```bash
+source /path/to/sesh/sesh.sh
+```
+
 ## Dependencies
 
-Install all dependencies with Homebrew:
+Install with Homebrew:
 
-```fish
+```
 brew install zellij lazygit
 ```
 
@@ -46,9 +60,10 @@ You'll also need at least one AI tool:
 
 ## Usage
 
-```fish
-sesh                    # Claude + lazygit in current directory
-sesh pi                 # Pi + lazygit in current directory
+```
+sesh                      # Claude + lazygit in current directory
+sesh codex                # Codex + lazygit in current directory
+sesh pi                   # Pi + lazygit in current directory
 sesh claude ~/my-project  # Claude + lazygit in a specific directory
 ```
 
