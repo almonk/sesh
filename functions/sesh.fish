@@ -91,7 +91,8 @@ function sesh
             return 1
     end
 
-    set -l layout_file (mktemp /tmp/sesh-layout.XXXXXX.kdl)
+    set -l layout_dir (mktemp -d /tmp/sesh-XXXXXX)
+    set -l layout_file "$layout_dir/layout.kdl"
     echo "
 keybinds {
     shared {
@@ -111,5 +112,5 @@ layout {
 " > $layout_file
 
     zellij --layout "$layout_file"
-    rm -f "$layout_file"
+    rm -rf "$layout_dir"
 end

@@ -94,7 +94,9 @@ sesh() {
     esac
 
     local layout_file
-    layout_file="$(mktemp /tmp/sesh-layout.XXXXXX.kdl)"
+    local layout_dir
+    layout_dir="$(mktemp -d /tmp/sesh-XXXXXX)"
+    local layout_file="$layout_dir/layout.kdl"
     cat > "$layout_file" <<EOF
 keybinds {
     shared {
@@ -114,5 +116,5 @@ layout {
 EOF
 
     zellij --layout "$layout_file"
-    rm -f "$layout_file"
+    rm -rf "$layout_dir"
 }
