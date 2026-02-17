@@ -1,5 +1,4 @@
 ![sesh](screenshot.png)
-<sup>A typical sesh, running on Ghostty with GitHub Dark and Berkeley Mono</sup>
 
 # sesh
 
