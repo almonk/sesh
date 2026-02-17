@@ -1,8 +1,8 @@
+![sesh](screenshot.png)
+
 # sesh
 
 A split terminal session for AI-assisted coding. Runs an AI tool alongside lazygit in a single Zellij layout.
-
-![sesh](screenshot.png)
 
 Sessions persist in the background, so you can detach and reattach from any terminal. I use this on a remote server with [Echo](https://replay.software/echo) for long-lived coding sessions I can pick up from any device — start a session on your laptop, continue it from your phone on the go.
 
