@@ -56,7 +56,7 @@ You'll also need at least one AI tool:
 |------|---------|
 | [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | `npm install -g @anthropic-ai/claude-code` |
 | [Codex](https://github.com/openai/codex) | `npm install -g @openai/codex` |
-| [Pi](https://pi.ai) | See pi.ai for installation |
+| [Pi](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent) | `npm install -g @mariozechner/pi-coding-agent` |
 
 ## Usage
 
