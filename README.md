@@ -55,6 +55,7 @@ You'll also need at least one AI tool:
 |------|---------|
 | [Claude Code](https://docs.anthropic.com/en/docs/claude-code) | `npm install -g @anthropic-ai/claude-code` |
 | [Codex](https://github.com/openai/codex) | `npm install -g @openai/codex` |
+| [Amp](https://ampcode.com) | `npm install -g @sourcegraph/amp` |
 | [Pi](https://github.com/badlogic/pi-mono/tree/main/packages/coding-agent) | `npm install -g @mariozechner/pi-coding-agent` |
 
 ## Usage
@@ -62,6 +63,7 @@ You'll also need at least one AI tool:
 ```
 sesh                      # Claude + lazygit in current directory
 sesh codex                # Codex + lazygit in current directory
+sesh amp                  # Amp + lazygit in current directory
 sesh pi                   # Pi + lazygit in current directory
 sesh claude ~/my-project  # Claude + lazygit in a specific directory
 sesh pickup               # Pickup the last session

@@ -58,6 +58,15 @@ sesh() {
             cwd \"$dir\"
         }"
             ;;
+        amp)
+            if ! command -v amp &>/dev/null; then
+                echo "sesh: 'amp' is not installed. Install with: npm install -g @sourcegraph/amp"
+                return 1
+            fi
+            cmd_block="pane size=\"65%\" command=\"amp\" {
+            cwd \"$dir\"
+        }"
+            ;;
         pi)
             if ! command -v pi &>/dev/null; then
                 echo "sesh: 'pi' is not installed."
@@ -68,11 +77,12 @@ sesh() {
         }"
             ;;
         *)
-            echo "Usage: sesh [claude|codex|pi] [directory]"
+            echo "Usage: sesh [claude|codex|amp|pi] [directory]"
             echo ""
             echo "Tools:"
             echo "  claude  Claude Code CLI (default)"
             echo "  codex   OpenAI Codex CLI"
+            echo "  amp     Amp CLI (Sourcegraph)"
             echo "  pi      Pi CLI"
             echo ""
             echo "Examples:"
