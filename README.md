@@ -2,9 +2,9 @@
 
 # sesh
 
-A split terminal session for AI-assisted coding. Runs an AI tool alongside lazygit in a single Zellij layout.
+A persistent split terminal session for AI-assisted coding. Runs an AI tool alongside lazygit in a single Zellij layout.
 
-Sessions persist in the background, so you can detach and reattach from any terminal. I use this on a remote server with [Echo](https://replay.software/echo) for long-lived coding sessions I can pick up from any device — start a session on your laptop, continue it from your phone on the go.
+Sessions survive disconnects, so they're perfect for remote servers and coding across devices. Start a session on your laptop, close the lid, and pick it up from your phone or another machine. Pair it with a mobile SSH client like [Echo](https://replay.software/echo) for coding on the go.
 
 ## Install
 
