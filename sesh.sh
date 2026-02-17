@@ -17,7 +17,7 @@ sesh() {
         return
     fi
 
-    if [[ "$tool" == "last" ]]; then
+    if [[ "$tool" == "pickup" ]]; then
         local session
         session="$(zellij list-sessions 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | head -1 | awk '{print $1}')"
         if [[ -z "$session" ]]; then

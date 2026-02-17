@@ -14,7 +14,7 @@ function sesh
         return
     end
 
-    if test "$tool" = last
+    if test "$tool" = pickup
         set -l session (zellij list-sessions 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | head -1 | awk '{print $1}')
         if test -z "$session"
             echo "sesh: no sessions found"
