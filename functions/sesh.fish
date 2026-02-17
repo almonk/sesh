@@ -9,6 +9,11 @@ function sesh
 
     set -l tool (string lower -- $argv[1])
 
+    if test "$tool" = list
+        zellij list-sessions
+        return
+    end
+
     if test "$tool" = last
         set -l session (zellij list-sessions 2>/dev/null | sed 's/\x1b\[[0-9;]*m//g' | head -1 | awk '{print $1}')
         if test -z "$session"
