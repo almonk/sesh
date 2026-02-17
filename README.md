@@ -5,7 +5,7 @@ A split terminal session for AI-assisted coding. Runs an AI tool alongside lazyg
 ```
 ┌─────────────────────────────┬───────────────────┐
 │                             │                   │
-│         Claude Code         │     lazygit       │
+│          Agent TUI          │     lazygit       │
 │           (65%)             │      (35%)        │
 │                             │                   │
 └─────────────────────────────┴───────────────────┘
