@@ -1,5 +1,3 @@
-![sesh](screenshot.png)
-
 # sesh
 
 A single command for persistent, split terminal AI coding sessions. Runs an AI tool alongside lazygit in a single Zellij layout.
@@ -7,6 +5,8 @@ A single command for persistent, split terminal AI coding sessions. Runs an AI t
 Sessions survive disconnects, so they're perfect for remote servers and coding across devices. Start a session on your laptop, close the lid, and pick it up from your phone or another machine. Pair it with a mobile SSH client like [Echo](https://replay.software/echo) for coding on the go.
 
 > **Note:** This project is not related to [joshmedeski/sesh](https://github.com/joshmedeski/sesh), a terminal session manager for tmux.
+
+![sesh](screenshot.png)
 
 ## Install
 
