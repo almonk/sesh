@@ -66,7 +66,6 @@ sesh codex                # Codex + lazygit in current directory
 sesh amp                  # Amp + lazygit in current directory
 sesh pi                   # Pi + lazygit in current directory
 sesh claude ~/my-project  # Claude + lazygit in a specific directory
-sesh pool                 # Run any command in the main pane
 sesh vim ~/my-project     # Works with any binary in PATH
 sesh pickup               # Pickup the last session
 sesh list                 # List all sessions

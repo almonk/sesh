@@ -86,7 +86,6 @@ sesh() {
             echo "  pi      Pi CLI"
             echo ""
             echo "Any other command will be run in the main pane:"
-            echo "  sesh pool             # pool + lazygit in current dir"
             echo "  sesh vim ~/project    # vim + lazygit in ~/project"
             echo ""
             echo "Examples:"
