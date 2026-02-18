@@ -46,7 +46,7 @@ Install sesh from https://github.com/almonk/sesh — it's a shell function that 
 Install with Homebrew:
 
 ```
-brew install zellij lazygit yazi
+brew install zellij lazygit
 ```
 
 You'll also need at least one AI tool:
@@ -101,7 +101,6 @@ sesh includes built-in keybindings for switching between panes:
 |-----|--------|
 | `Alt+1` | Focus the AI pane (left) |
 | `Alt+2` | Focus lazygit (right) |
-| `Alt+3` | Toggle yazi file manager (bottom floating pane) |
 | `Ctrl+q` | Detach from the session (keeps it running) |
 
 These are embedded in the session layout and won't interfere with your global Zellij config. Use `Ctrl+q` to close the window — your session stays alive in the background and you can reattach later.

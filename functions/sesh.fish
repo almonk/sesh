@@ -1,6 +1,6 @@
 function sesh
     # Validate dependencies
-    for dep in zellij lazygit yazi
+    for dep in zellij lazygit
         if not command -q $dep
             echo "sesh: '$dep' is not installed. See https://github.com/almonk/sesh#dependencies"
             return 1
@@ -109,7 +109,6 @@ keybinds {
     shared {
         bind \"Alt 1\" { MoveFocus \"left\"; }
         bind \"Alt 2\" { MoveFocus \"right\"; }
-        bind \"Alt 3\" { ToggleFloatingPanes; }
         bind \"Ctrl q\" { Detach; }
     }
 }
@@ -118,23 +117,6 @@ layout {
         $cmd_block
         pane size=\"35%\" command=\"lazygit\" {
             cwd \"$dir\"
-        }
-    }
-    floating_panes {
-        pane command=\"yazi\" {
-            cwd \"$dir\"
-            width \"100%\"
-            height \"50%\"
-            x \"0%\"
-            y \"51%\"
-        }
-        pane command=\"bash\" {
-            args \"-c\" \"sleep 0.001 && zellij action toggle-floating-panes\"
-            close_on_exit true
-            width 1
-            height 1
-            x \"0%\"
-            y \"0%\"
         }
     }
 }
