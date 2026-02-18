@@ -75,20 +75,32 @@ function sesh
             set cmd_block "pane size=\"65%\" command=\"pi\" {
             cwd \"$dir\"
         }"
-        case '*'
-            echo "Usage: sesh [claude|codex|amp|pi] [directory]"
+        case help --help -h
+            echo "Usage: sesh [command] [directory]"
             echo ""
-            echo "Tools:"
+            echo "Built-in tools:"
             echo "  claude  Claude Code CLI (default)"
             echo "  codex   OpenAI Codex CLI"
             echo "  amp     Amp CLI (Sourcegraph)"
             echo "  pi      Pi CLI"
             echo ""
+            echo "Any other command will be run in the main pane:"
+            echo "  sesh pool             # pool + lazygit in current dir"
+            echo "  sesh vim ~/project    # vim + lazygit in ~/project"
+            echo ""
             echo "Examples:"
             echo "  sesh                  # Claude + lazygit in current dir"
             echo "  sesh pi               # Pi + lazygit in current dir"
             echo "  sesh claude ~/project # Claude + lazygit in ~/project"
-            return 1
+            return 0
+        case '*'
+            if not command -q $tool
+                echo "sesh: '$tool' is not installed or not in PATH"
+                return 1
+            end
+            set cmd_block "pane size=\"65%\" command=\"$tool\" {
+            cwd \"$dir\"
+        }"
     end
 
     set -l layout_dir (mktemp -d /tmp/sesh-XXXXXX)
