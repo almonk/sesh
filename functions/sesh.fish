@@ -98,7 +98,7 @@ keybinds {
     shared {
         bind \"Alt 1\" { MoveFocus \"left\"; }
         bind \"Alt 2\" { MoveFocus \"right\"; }
-        bind \"Alt 3\" { ToggleFloatingPanes; }
+        bind \"Alt 3\" { Run \"yazi\" \"$dir\" { floating true; close_on_exit true; }; }
         bind \"Ctrl q\" { Detach; }
     }
 }
@@ -107,15 +107,6 @@ layout {
         $cmd_block
         pane size=\"35%\" command=\"lazygit\" {
             cwd \"$dir\"
-        }
-    }
-    floating_panes {
-        pane command=\"yazi\" {
-            cwd \"$dir\"
-            width \"100%\"
-            height \"50%\"
-            x \"0%\"
-            y \"51%\"
         }
     }
 }
