@@ -122,7 +122,7 @@ layout {
             y "51%"
         }
         pane command="bash" {
-            args "-c" "sleep 0.5 && zellij action toggle-floating-panes"
+            args "-c" "sleep 0.05 && zellij action toggle-floating-panes"
             close_on_exit true
             width 1
             height 1
