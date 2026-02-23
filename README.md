@@ -103,6 +103,7 @@ sesh includes built-in keybindings for switching between panes:
 |-----|--------|
 | `Alt+1` | Focus the AI pane (left) |
 | `Alt+2` | Focus lazygit (right) |
+| `Ctrl+f` | Toggle focused pane fullscreen (collapse/expand lazygit) |
 | `Ctrl+q` | Detach from the session (keeps it running) |
 
 These are embedded in the session layout and won't interfere with your global Zellij config. Use `Ctrl+q` to close the window — your session stays alive in the background and you can reattach later.
