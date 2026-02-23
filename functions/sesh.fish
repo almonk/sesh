@@ -109,6 +109,7 @@ keybinds {
     shared {
         bind \"Alt 1\" { MoveFocus \"left\"; }
         bind \"Alt 2\" { MoveFocus \"right\"; }
+        bind \"Ctrl f\" { ToggleFocusFullscreen; }
         bind \"Ctrl q\" { Detach; }
     }
 }
